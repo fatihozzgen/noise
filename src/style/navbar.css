@@ -1,0 +1,33 @@
+.navbar {
+  width: 100%;
+  height: 1.8rem;
+  background-color: rgb(248, 247, 246);
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  border-bottom: 3px solid #ccc;
+}
+
+.nav-logo {
+  font-family: "New Rocker", cursive;
+  border: 1px solid tomato;
+}
+
+.navigation {
+  font-size: 0.4rem;
+  font-weight: bolder;
+  display: flex;
+  font-family: "Graduate", cursive;
+  gap: 0.6rem;
+  margin-left: 4rem;
+  border: 1px solid tomato;
+}
+
+.nav-right-side {
+  display: flex;
+  font-size: 0.4rem;
+  margin-left: auto;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid tomato;
+}
