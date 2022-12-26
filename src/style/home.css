@@ -1,0 +1,15 @@
+.home-images {
+  display: flex;
+  padding: 1rem 0.3rem 0.6rem 0.3rem;
+  gap: 0.2rem;
+  justify-content: center;
+}
+
+.home-navigation {
+  display: flex;
+  padding: 0 1rem 0 1rem;
+  align-items: center;
+  font-family: "Graduate", cursive;
+  font-size: 0.7rem;
+  font-weight: bold;
+}

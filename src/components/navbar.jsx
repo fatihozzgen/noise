@@ -4,7 +4,7 @@ import { BiSearchAlt2 } from "react-icons/bi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BsBasket } from "react-icons/bs";
 
-function navbar() {
+function Navbar() {
   return (
     <div className="navbar">
       <div className="nav-logo"> NOISE</div>
@@ -27,4 +27,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;

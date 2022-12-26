@@ -10,7 +10,7 @@
 
 .nav-logo {
   font-family: "New Rocker", cursive;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
 }
 
 .navigation {
@@ -20,7 +20,7 @@
   font-family: "Graduate", cursive;
   gap: 0.6rem;
   margin-left: 4rem;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
 }
 
 .nav-right-side {
@@ -29,5 +29,5 @@
   margin-left: auto;
   align-items: center;
   gap: 0.4rem;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
 }
