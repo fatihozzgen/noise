@@ -1,0 +1,31 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 60%;
+  height: 65%;
+  border: 2px solid black;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  column-gap: 0.3rem;
+}
+
+.login-form {
+  width: 35%;
+  height: 100%;
+  border: 1px solid tomato;
+}
+
+.login-img {
+  width: 65%;
+  height: 100%;
+  border-bottom-right-radius: 1rem;
+  background-color: tomato;
+}

@@ -3,7 +3,7 @@ import "../style/home.css";
 
 function home() {
   return (
-    <div>
+    <div className="home">
       <div className="home-images">
         <div
           style={{
@@ -47,7 +47,7 @@ function home() {
       <div className="home-navigation">
         <div className="new-product"> NEW PRODUCT</div>
 
-        <div className="navigation">
+        <div className="">
           <div> HOME</div>
           <div> MEN'S</div>
           <div> WOMEN'S</div>

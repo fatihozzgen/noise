@@ -1,15 +1,31 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-images {
   display: flex;
-  padding: 1rem 0.3rem 0.6rem 0.3rem;
+  padding: 0.6rem 0 0.6rem 0;
+  width: 100%;
   gap: 0.2rem;
   justify-content: center;
 }
 
 .home-navigation {
   display: flex;
-  padding: 0 1rem 0 1rem;
   align-items: center;
   font-family: "Graduate", cursive;
-  font-size: 0.7rem;
+  font-size: 0.4rem;
   font-weight: bold;
+  /* border: 1px solid tomato; */
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 0.7rem 0 0.7rem;
+}
+
+.home-navigation > div {
+  display: flex;
+  column-gap: 0.7rem;
 }
