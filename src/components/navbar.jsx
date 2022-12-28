@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="nav-logo"> NOISE</div>
+      <Link className="nav-logo" to="/">
+        NOISE
+      </Link>
 
       <div className="navigation">
         <Link to="/">Home </Link>
@@ -24,7 +26,11 @@ function Navbar() {
       </div>
 
       <div className="nav-right-side">
-        <div className="log-reg">Log in/Register</div>
+        <div className="log-reg">
+          {" "}
+          <Link to="login">Log in/ </Link>
+          <Link to="register">Register </Link>
+        </div>
         <BiSearchAlt2 />
         <MdFavoriteBorder />
         <BsBasket />
