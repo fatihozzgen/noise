@@ -9,8 +9,8 @@
   display: flex;
   padding: 0.6rem 0 0.6rem 0;
   width: 100%;
-  gap: 0.2rem;
   justify-content: center;
+  gap: 0.3rem;
 }
 
 .home-navigation {
@@ -28,4 +28,52 @@
 .home-navigation > div {
   display: flex;
   column-gap: 0.7rem;
+}
+
+.box1 {
+  width: 42%;
+  height: 9rem;
+}
+
+.box1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box2 {
+  width: 27%;
+  height: 9rem;
+}
+
+.box2 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box3 {
+  width: 100%;
+  height: 4.4rem;
+}
+
+.box3 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box4 {
+  width: 100%;
+  height: 4.4rem;
+}
+
+.box4 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box34 {
+  width: 26%;
 }

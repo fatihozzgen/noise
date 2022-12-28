@@ -1,45 +1,30 @@
 import React from "react";
 import "../style/home.css";
+import Women from "../images/women.jpg";
+import Men from "../images/men.jpg";
+import Kid from "../images/kid.jpg";
+import Acc from "../images/accessories.jpg";
 
 function home() {
   return (
     <div className="home">
       <div className="home-images">
-        <div
-          style={{
-            backgroundColor: "#1abc9c",
-            width: "13rem",
-            height: "9rem",
-          }}
-        >
-          WOMEN
+        <div className="box1">
+          <img src={Women} />
         </div>
 
-        <div
-          style={{ backgroundColor: "#2ecc71", width: "8rem", height: "9rem" }}
-        >
-          MEN
+        <div className="box2">
+          <img src={Men} />
         </div>
         <div
+          className="box34"
           style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}
         >
-          <div
-            style={{
-              backgroundColor: "#3498db",
-              width: "9rem",
-              height: "4.4rem",
-            }}
-          >
-            KID
+          <div className="box3">
+            <img src={Kid} />
           </div>
-          <div
-            style={{
-              backgroundColor: "#9b59b6",
-              width: "9rem",
-              height: "4.4rem",
-            }}
-          >
-            ACCESSORIES
+          <div className="box4">
+            <img src={Acc} />
           </div>
         </div>
       </div>

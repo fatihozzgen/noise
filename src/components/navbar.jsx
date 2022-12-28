@@ -3,6 +3,7 @@ import "../style/navbar.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BsBasket } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,11 +11,16 @@ function Navbar() {
       <div className="nav-logo"> NOISE</div>
 
       <div className="navigation">
-        <div> HOME</div>
-        <div> MEN'S</div>
-        <div> WOMEN'S</div>
-        <div> KID'S</div>
-        <div> ACCESSORIES</div>
+        <Link to="/">Home </Link>
+        <Link to="women">WOMEN'S </Link>
+        <Link to="men">MEN'S </Link>
+        <Link to="kid">KID'S </Link>
+        <Link to="accessories">ACCESSORIES </Link>
+
+        <div> </div>
+        <div> </div>
+        <div> </div>
+        <div> </div>
       </div>
 
       <div className="nav-right-side">
