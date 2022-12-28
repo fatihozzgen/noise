@@ -1,15 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 import Login from "./pages/Login";
-import "./style/login.css";
+import "./style/register.css";
 
 function App() {
   return (
     <div className="App">
-      <Login />
-      {/* <Navbar /> */}
-      {/* <Home /> */}
+      {/* <Register /> */}
+      {/* <Login /> */}
+      <Navbar />
+      <Home />
     </div>
   );
 }

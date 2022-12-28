@@ -18,7 +18,7 @@ function Navbar() {
       </div>
 
       <div className="nav-right-side">
-        <div>Login/Register</div>
+        <div className="log-reg">Log in/Register</div>
         <BiSearchAlt2 />
         <MdFavoriteBorder />
         <BsBasket />
