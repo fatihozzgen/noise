@@ -10,6 +10,8 @@ import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Kid from "./pages/Kid";
 import Acc from "./pages/Acc";
+import Basket from "./pages/Basket";
+import Favorite from "./pages/Favorite";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="men" element={<Men />} />
           <Route path="kid" element={<Kid />} />
           <Route path="accessories" element={<Acc />} />
+          <Route path="favorites" element={<Favorite />} />
+          <Route path="basket" element={<Basket />} />
         </Routes>
       </BrowserRouter>
     </div>

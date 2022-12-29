@@ -18,22 +18,21 @@ function Navbar() {
         <Link to="men">MEN'S </Link>
         <Link to="kid">KID'S </Link>
         <Link to="accessories">ACCESSORIES </Link>
-
-        <div> </div>
-        <div> </div>
-        <div> </div>
-        <div> </div>
       </div>
 
       <div className="nav-right-side">
         <div className="log-reg">
-          {" "}
           <Link to="login">Log in/ </Link>
           <Link to="register">Register </Link>
         </div>
         <BiSearchAlt2 />
-        <MdFavoriteBorder />
-        <BsBasket />
+        <Link to="favorites">
+          <MdFavoriteBorder />
+        </Link>
+
+        <Link to="basket">
+          <BsBasket />
+        </Link>
       </div>
     </div>
   );
