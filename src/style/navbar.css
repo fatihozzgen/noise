@@ -23,9 +23,11 @@
   /* border: 1px solid tomato; */
 }
 
-a {
+a,
+svg {
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-right-side {
@@ -40,4 +42,22 @@ a {
 .log-reg {
   font-family: "Graduate", cursive;
   font-size: 0.3rem;
+}
+
+.nav-input {
+  border: 1px solid #ccc;
+  outline: none;
+  padding-left: 0.3rem;
+  border-radius: 0.1rem;
+  width: 4rem;
+  height: 0.6rem;
+  padding-bottom: 0.04rem;
+}
+
+.nav-input::placeholder {
+  font-size: 0.35rem;
+}
+
+.offinput {
+  display: none;
 }

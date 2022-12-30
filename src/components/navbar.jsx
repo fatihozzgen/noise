@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/navbar.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { MdFavoriteBorder } from "react-icons/md";
@@ -6,6 +6,8 @@ import { BsBasket } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [input, setinput] = useState(true);
+  console.log(input);
   return (
     <div className="navbar">
       <Link className="nav-logo" to="/">
@@ -25,7 +27,17 @@ function Navbar() {
           <Link to="login">Log in/ </Link>
           <Link to="register">Register </Link>
         </div>
-        <BiSearchAlt2 />
+        <input
+          className={input ? "offinput" : "nav-input"}
+          placeholder="Search"
+        />
+
+        <BiSearchAlt2
+          onClick={() => {
+            setinput(!input);
+          }}
+        />
+
         <Link to="favorites">
           <MdFavoriteBorder />
         </Link>
