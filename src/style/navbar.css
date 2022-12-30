@@ -52,12 +52,18 @@ svg {
   width: 4rem;
   height: 0.6rem;
   padding-bottom: 0.04rem;
+  display: none;
+}
+
+.searchicon:hover ~ .nav-input,
+.nav-input:hover {
+  display: block;
 }
 
 .nav-input::placeholder {
   font-size: 0.35rem;
 }
 
-.offinput {
+/* .offinput {
   display: none;
-}
+} */

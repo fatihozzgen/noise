@@ -15,7 +15,7 @@ function Navbar() {
       </Link>
 
       <div className="navigation">
-        <Link to="/">Home </Link>
+        <Link to="/">HOME </Link>
         <Link to="women">WOMEN'S </Link>
         <Link to="men">MEN'S </Link>
         <Link to="kid">KID'S </Link>
@@ -27,16 +27,9 @@ function Navbar() {
           <Link to="login">Log in/ </Link>
           <Link to="register">Register </Link>
         </div>
-        <input
-          className={input ? "offinput" : "nav-input"}
-          placeholder="Search"
-        />
 
-        <BiSearchAlt2
-          onClick={() => {
-            setinput(!input);
-          }}
-        />
+        <BiSearchAlt2 className="searchicon" />
+        <input className={"nav-input"} placeholder="Search" />
 
         <Link to="favorites">
           <MdFavoriteBorder />
