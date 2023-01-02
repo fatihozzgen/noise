@@ -1,4 +1,5 @@
 import React from "react";
+import Cloth2 from "../images/cloth2.jpg";
 
 function Basket() {
   return (
@@ -15,6 +16,70 @@ function Basket() {
               <div>Price</div>
             </div>
           </div>
+
+          <div className="basket-cards">
+            <div className="basket-img">
+              <img src={Cloth2} />
+              <div className="basket-desc">
+                <div className="basket-name">Slim Fit Jeans</div>
+                <div className="delete-fav">
+                  <span>Remove item</span> <span>Remove item</span>
+                </div>
+              </div>
+            </div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+          </div>
+
+          <div className="basket-cards">
+            <div className="basket-img">
+              <img src={Cloth2} />
+              <div className="basket-desc">
+                <div className="basket-name">Slim Fit Jeans</div>
+                <div className="delete-fav">
+                  <span>Remove item</span> <span>Remove item</span>
+                </div>
+              </div>
+            </div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+          </div>
+
+          <div className="basket-cards">
+            <div className="basket-img">
+              <img src={Cloth2} />
+              <div className="basket-desc">
+                <div className="basket-name">Slim Fit Jeans</div>
+                <div className="delete-fav">
+                  <span>Remove item</span> <span>Remove item</span>
+                </div>
+              </div>
+            </div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+          </div>
+
+          <div className="basket-cards">
+            <div className="basket-img">
+              <img src={Cloth2} />
+              <div className="basket-desc">
+                <div className="basket-name">Slim Fit Jeans</div>
+                <div className="delete-fav">
+                  <span>Remove item</span> <span>Remove item</span>
+                </div>
+              </div>
+            </div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+            <div className="basket-color">Dark blue</div>
+          </div>
         </div>
 
         <div className="basket-summary">
@@ -26,7 +91,9 @@ function Basket() {
             <div>
               Shipping costs: <span>Free</span>
             </div>
-            <div style={{ fontWeight: "bold" }}>Add promocode </div>
+            <div style={{ fontWeight: "bold", cursor: "pointer" }}>
+              Add promocode
+            </div>
           </div>
 
           <div className="total-price">
