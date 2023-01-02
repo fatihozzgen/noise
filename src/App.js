@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import "./style/register.css";
 import "./style/card.css";
+import "./style/basket.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Women from "./pages/Women";
 import Men from "./pages/Men";

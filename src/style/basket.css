@@ -1,0 +1,39 @@
+.basket {
+  border: 1px solid tomato;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.basket-header {
+  font-size: 0.6rem;
+  font-family: "Graduate", cursive;
+  font-weight: 500;
+  display: flex;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.product-header {
+  width: 70%;
+  height: 1rem;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-box1 {
+  display: flex;
+  width: 50%;
+}
+
+.header-box2 {
+  display: flex;
+  width: 50%;
+  column-gap: 2rem;
+  justify-content: flex-end;
+}
+
+.basket-cards {
+  display: flex;
+}
