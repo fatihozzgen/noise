@@ -19,7 +19,7 @@
 
 .product-header {
   height: 1rem;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   display: flex;
   align-items: center;
   /* border-bottom: 1px solid #ccc; */
@@ -33,11 +33,14 @@
   width: 50%;
   /* border: 1px solid tomato; */
   padding-left: 0.3rem;
+  font-family: "Graduate", cursive;
 }
 
 .header-box2 {
   display: flex;
   width: 50%;
+  font-family: "Graduate", cursive;
+
   /* border: 1px solid green; */
 }
 
@@ -150,15 +153,17 @@
   /* border: 1px solid black; */
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding-left: 0.5rem;
-  padding-bottom: 0.3rem;
   column-gap: 0.3rem;
+  font-size: 0.25rem;
+  cursor: pointer;
+  font-family: "Graduate", cursive;
 }
 
-.delete-fav > span {
+.delete-fav > svg {
   /* border: 1px solid tomato; */
-  font-size: 0.3rem;
+  font-size: 0.35rem;
 }
 
 .basket-color {
@@ -170,4 +175,29 @@
   justify-content: center;
   font-family: "Graduate", cursive;
   width: 12.5%;
+}
+
+.basket-amount {
+  /* border: 1px solid black; */
+  display: flex;
+  font-size: 0.4rem;
+  width: 12.5%;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.3rem;
+  font-family: "Graduate", cursive;
+}
+
+.amount-svg {
+  padding-top: 0.1rem;
+}
+
+.basket-price {
+  font-size: 0.3rem;
+  /* border: 1px solid tomato; */
+  width: 12.5%;
+  font-family: "Graduate", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

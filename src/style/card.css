@@ -8,13 +8,13 @@
 
 .card-container {
   width: 6rem;
-  height: 9.7rem;
-  /* border: 1px solid silver; */
+  height: 10.7rem;
+  border: 1px solid silver;
 }
 
 .card-img {
   width: 6rem;
-  height: 8rem;
+  height: 9rem;
 }
 
 .card-img > img {
