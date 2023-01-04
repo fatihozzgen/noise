@@ -1,0 +1,24 @@
+.favorite {
+  border: 1px solid tomato;
+  /* display: flex; */
+}
+
+.favorite-text {
+  font-size: 0.7rem;
+  font-family: "Graduate", cursive;
+  font-weight: 500;
+  margin-top: 0.6rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  padding-left: 1rem;
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+.favorite-product {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}

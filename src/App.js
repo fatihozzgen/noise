@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import "./style/register.css";
+import "./style/favorite.css";
 import "./style/card.css";
 import "./style/basket.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
