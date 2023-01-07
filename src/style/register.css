@@ -58,7 +58,7 @@
   font-family: "Graduate", cursive;
 }
 
-.register-form > input {
+input {
   font-size: 0.4rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.2rem;
