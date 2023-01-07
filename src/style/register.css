@@ -83,3 +83,16 @@ input {
   font-family: "Graduate", cursive;
   font-weight: bolder;
 }
+
+.sign-text {
+  font-size: 0.2rem;
+  color: rgb(97, 97, 97);
+  font-family: "Graduate", cursive;
+  font-weight: 100;
+}
+
+.sign-text > span {
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.1rem;
+}

@@ -1,5 +1,7 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Logimage from "../images/log-image.jpg";
+import { Link } from "react-router-dom";
+
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -54,7 +56,10 @@ function Register() {
             </button>
           </form>
           <div className="register-acc">
-            Already have an account ? <strong>Log in</strong>
+            Already have an account ?{" "}
+            <Link to="/login" replace>
+              Sign in
+            </Link>
           </div>
         </div>
         <div className="register-img">
