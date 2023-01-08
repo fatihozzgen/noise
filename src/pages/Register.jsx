@@ -56,7 +56,7 @@ function Register() {
             </button>
           </form>
           <div className="register-acc">
-            Already have an account ?{" "}
+            Already have an account ?
             <Link to="/login" replace>
               Sign in
             </Link>

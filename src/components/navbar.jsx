@@ -24,8 +24,8 @@ function Navbar() {
 
       <div className="nav-right-side">
         <div className="log-reg">
-          <Link to="login">Log in/ </Link>
-          <Link to="register">Register </Link>
+          <Link to="login">Log in </Link>
+          {/* <Link to="register">Register </Link> */}
         </div>
 
         <BiSearchAlt2 className="searchicon" />

@@ -16,10 +16,10 @@ function Login() {
       }
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-          alert("Giriş Yapıldı");
+          alert("Giriş Yapildi");
         })
         .catch((e) => {
-          console.log(e);
+          alert("Kullanici adi veya şifre yanliş");
         });
     },
     [email, password]
@@ -29,6 +29,7 @@ function Login() {
       <div className="register-container">
         <div className="register-form">
           <div className="register-logo"> NOISE</div>
+          <div className="register-header">Log in</div>
           <form onSubmit={handleSubmit}>
             <input
               type="email"
@@ -49,7 +50,7 @@ function Login() {
             </button>
           </form>
           <div className="sign-text">
-            Don't have an account?{" "}
+            Don't have an account?
             <Link to="/register" replace>
               Sign in
             </Link>
