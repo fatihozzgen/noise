@@ -18,7 +18,7 @@ function Login() {
         .then(() => {
           alert("Giriş Yapildi");
         })
-        .catch((e) => {
+        .catch(() => {
           alert("Kullanici adi veya şifre yanliş");
         });
     },
