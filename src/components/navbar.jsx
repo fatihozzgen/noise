@@ -3,9 +3,11 @@ import "../style/navbar.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BsBasket } from "react-icons/bs";
+import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [user, setUser] = useState(true);
   const [input, setinput] = useState(true);
   console.log(input);
   return (
@@ -23,11 +25,6 @@ function Navbar() {
       </div>
 
       <div className="nav-right-side">
-        <div className="log-reg">
-          <Link to="login">Log in </Link>
-          {/* <Link to="register">Register </Link> */}
-        </div>
-
         <BiSearchAlt2 className="searchicon" />
         <input className={"nav-input"} placeholder="Search" />
 
@@ -37,6 +34,10 @@ function Navbar() {
 
         <Link to="basket">
           <BsBasket />
+        </Link>
+
+        <Link to={user ? "" : "login"}>
+          <VscAccount />
         </Link>
       </div>
     </div>
