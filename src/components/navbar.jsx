@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [user, setUser] = useState(true);
-  const [input, setinput] = useState(true);
-  console.log(input);
   return (
     <div className="navbar">
       <Link className="nav-logo" to="/">

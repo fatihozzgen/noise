@@ -4,28 +4,29 @@ import Women from "../images/women.jpg";
 import Men from "../images/men.jpg";
 import Kid from "../images/kid.jpg";
 import Acc from "../images/accessories.jpg";
+import { Link } from "react-router-dom";
 
 function home() {
   return (
     <div className="home">
       <div className="home-images">
-        <div className="box1">
+        <Link to="women" className="box1">
           <img src={Women} />
-        </div>
+        </Link>
 
-        <div className="box2">
+        <Link to="men" className="box2">
           <img src={Men} />
-        </div>
+        </Link>
         <div
           className="box34"
           style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}
         >
-          <div className="box3">
+          <Link to="kid" className="box3">
             <img src={Kid} />
-          </div>
-          <div className="box4">
+          </Link>
+          <Link to="accessories" className="box4">
             <img src={Acc} />
-          </div>
+          </Link>
         </div>
       </div>
 
