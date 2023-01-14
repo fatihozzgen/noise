@@ -5,8 +5,13 @@ import Men from "../images/men.jpg";
 import Kid from "../images/kid.jpg";
 import Acc from "../images/accessories.jpg";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
-function home() {
+function Home() {
+  const user = useSelector((state) => state.user);
+
+  console.log(user);
+
   return (
     <div className="home">
       <div className="home-images">
@@ -45,4 +50,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

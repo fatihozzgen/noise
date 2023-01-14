@@ -5,9 +5,11 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { BsBasket } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 function Navbar() {
-  const [user, setUser] = useState(true);
+  const user = useSelector((state) => state.user);
+
   return (
     <div className="navbar">
       <Link className="nav-logo" to="/">
