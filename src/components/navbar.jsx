@@ -6,10 +6,12 @@ import { BsBasket } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { popupbox } from "../redux/user/userSlice";
 
 function Navbar() {
-  const user = useSelector((state) => state.user);
-
+  const { user, popup } = useSelector((state) => state.user);
+  console.log(popup);
+  const dispatch = useDispatch();
   return (
     <div className="navbar">
       <Link className="nav-logo" to="/">
@@ -36,9 +38,17 @@ function Navbar() {
           <BsBasket />
         </Link>
 
-        <Link to={user ? "" : "login"}>
+        <Link
+          onClick={() => dispatch(popupbox(!popup))}
+          to={user ? "" : "login"}
+        >
           <VscAccount />
         </Link>
+        {!popup && user && (
+          <div className="popup-profile">
+            <Link> Change your password</Link>
+          </div>
+        )}
       </div>
     </div>
   );
