@@ -14,13 +14,21 @@
 }
 
 .navigation {
+  box-sizing: border-box;
   font-size: 0.4rem;
   font-weight: bolder;
   display: flex;
+  align-items: center;
   font-family: "Graduate", cursive;
-  gap: 0.6rem;
+  column-gap: 0.6rem;
   margin-left: 4rem;
   /* border: 1px solid tomato; */
+  height: 1rem;
+}
+a:hover,
+a:focus,
+a:active {
+  border-bottom: 0.06rem solid black;
 }
 
 a,
