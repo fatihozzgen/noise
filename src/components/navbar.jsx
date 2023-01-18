@@ -39,12 +39,13 @@ function Navbar() {
         </Link>
 
         <Link
+          className="account"
           onClick={() => dispatch(popupbox(!popup))}
-          to={user ? "" : "login"}
+          to={!user && "login"}
         >
           <VscAccount />
         </Link>
-        {!popup && user && (
+        {user && (
           <div className="popup-profile">
             <Link> Change your password</Link>
           </div>
