@@ -47,7 +47,7 @@ function Navbar() {
         </Link>
         {user && (
           <div className="popup-profile">
-            <Link> Change your password</Link>
+            <Link to="change-password"> Change your password</Link>
           </div>
         )}
       </div>
