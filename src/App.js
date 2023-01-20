@@ -7,6 +7,7 @@ import "./style/register.css";
 import "./style/favorite.css";
 import "./style/card.css";
 import "./style/basket.css";
+import "./style/changePass.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Women from "./pages/Women";
 import Men from "./pages/Men";
