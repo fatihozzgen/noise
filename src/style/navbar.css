@@ -25,11 +25,12 @@
   /* border: 1px solid tomato; */
   height: 1rem;
 }
-a:hover,
+
+/* .navigation > a:hover,
 a:focus,
 a:active {
   border-bottom: 0.06rem solid black;
-}
+} */
 
 a,
 svg {
