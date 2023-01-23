@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 
 function Home() {
-  const items = useSelector((state) => state.products);
+  const items = useSelector((state) => state.products.items);
 
   const dispatch = useDispatch();
 
@@ -19,8 +19,7 @@ function Home() {
       dispatch(setItems(res));
     });
   }, [dispatch]);
-
-  console.log(items);
+  // console.log(items[0].img);
   return (
     <div className="home">
       <div className="home-images">
@@ -55,6 +54,11 @@ function Home() {
           <div> ACCESSORIES</div>
         </div>
       </div>
+      <h1>items</h1>
+      {/* {items &&
+        items.map((res) => {
+          return <img src={items[0].img} />;
+        })} */}
     </div>
   );
 }
