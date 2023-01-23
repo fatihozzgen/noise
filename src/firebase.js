@@ -16,18 +16,21 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-// const db = firebase.firestore()
-
-// db.collection("products");
-
 const colRef = collection(db, "products");
 
-getDocs(colRef).then((snapshot) => {
-  let products = [];
-  snapshot.docs.forEach((doc) => {
-    products.push({ ...doc.data(), id: doc.id });
-  });
-  console.log(products);
-});
+export const getFirebaseData = () => {
+  return getDocs(colRef)
+    .then((snapshot) => {
+      let products = [];
+      snapshot.docs.forEach((doc) => {
+        products.push({ ...doc.data(), id: doc.id });
+      });
+      // console.log(products);
+      return products;
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+};
 
 export const auth = getAuth(app);

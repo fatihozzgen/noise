@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../style/home.css";
 import Women from "../images/women.jpg";
 import Men from "../images/men.jpg";
 import Kid from "../images/kid.jpg";
 import Acc from "../images/accessories.jpg";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { getFirebaseData } from "../firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { setItems } from "../redux/products/productSlice";
 
 function Home() {
-  const user = useSelector((state) => state.user);
+  const items = useSelector((state) => state.products);
 
-  // console.log(user);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    getFirebaseData().then((res) => {
+      dispatch(setItems(res));
+    });
+  }, [dispatch]);
+
+  console.log(items);
   return (
     <div className="home">
       <div className="home-images">
