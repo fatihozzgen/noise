@@ -23,7 +23,7 @@ function Men() {
       {items &&
         menProducts.map((res) => {
           return (
-            <div className="card-container">
+            <div className="card-container" key={res.id}>
               <div className="card-img">
                 <img src={res.img} />
               </div>

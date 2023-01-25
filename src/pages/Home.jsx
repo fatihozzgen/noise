@@ -54,7 +54,7 @@ function Home() {
           <div> ACCESSORIES</div>
         </div>
       </div>
-      <h1>items</h1>
+      {/* <h1>items</h1>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
         {items &&
           items.map((res) => {
@@ -66,7 +66,7 @@ function Home() {
               />
             );
           })}
-      </div>
+      </div> */}
     </div>
   );
 }
