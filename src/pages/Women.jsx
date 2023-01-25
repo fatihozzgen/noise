@@ -17,6 +17,14 @@ function Women() {
     });
   }, [dispatch]);
 
+  const shortName = (name) => {
+    return name
+      ? name.length > 35
+        ? name.substring(0, 35) + "..."
+        : name
+      : "";
+  };
+
   return (
     <div className="women">
       {items &&
@@ -27,9 +35,7 @@ function Women() {
                 <img src={res.img} />
               </div>
               <div className="card-bottom">
-                <div className="card-title">
-                  Coool Relax Fit Crop Triko Kazak
-                </div>
+                <div className="card-title">{shortName(res.name)} </div>
                 <div className="card-stars">
                   <AiFillStar />
                   <AiFillStar />
