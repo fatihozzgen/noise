@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Cloth2 from "../images/cloth2.jpg";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
