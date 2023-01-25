@@ -19,7 +19,7 @@ function Home() {
       dispatch(setItems(res));
     });
   }, [dispatch]);
-  // console.log(items[0].img);
+  console.log(items.filter((item) => item.category === "girl"));
   return (
     <div className="home">
       <div className="home-images">
@@ -59,7 +59,11 @@ function Home() {
         {items &&
           items.map((res) => {
             return (
-              <img style={{ width: "200px", height: "300px" }} src={res.img} />
+              <img
+                key={res.id}
+                style={{ width: "200px", height: "300px" }}
+                src={res.img}
+              />
             );
           })}
       </div>

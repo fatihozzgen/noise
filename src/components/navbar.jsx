@@ -45,7 +45,7 @@ function Navbar() {
         >
           <VscAccount />
         </Link>
-        {user && (
+        {!user && (
           <div className="popup-profile">
             <Link to="change-password"> Change your password</Link>
           </div>
