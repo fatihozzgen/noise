@@ -34,6 +34,7 @@ function Women() {
               <div className="card-img">
                 <img src={res.img} />
               </div>
+
               <div className="card-bottom">
                 <div className="card-title">{shortName(res.name)} </div>
                 <div className="card-stars">

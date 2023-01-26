@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
@@ -33,14 +34,17 @@ function Men() {
       {menProducts &&
         menProducts.map((res) => {
           return (
-            <div
-              className="card-container"
-              key={res.id}
-              onClick={() => dispatch(setFavorite([...favorite, res]))}
-            >
+            <div className="card-container" key={res.id}>
               <div className="card-img">
                 <img src={res.img} />
+                <div
+                  className="fav-btn"
+                  onClick={() => dispatch(setFavorite([...favorite, res]))}
+                >
+                  <MdOutlineFavoriteBorder />
+                </div>
               </div>
+
               <div className="card-bottom">
                 <div className="card-title">{shortName(res.name)} </div>
                 <div className="card-stars">

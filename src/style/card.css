@@ -14,6 +14,39 @@
 .card-img {
   width: 6rem;
   height: 9rem;
+  position: relative;
+  border: 1px solid tomato;
+}
+.fav-btn {
+  background-color: whitesmoke;
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.7rem;
+  height: 0.7rem;
+  /* border: 1px solid tomato; */
+  z-index: -1;
+}
+
+.card-container:hover .fav-btn {
+  display: flex;
+  bottom: 0.5rem;
+  transition: all 0.15s ease-out;
+  z-index: 1;
+}
+
+.fav-btn > svg {
+  color: #1e272e;
+}
+
+.fav-btn > svg:hover {
+  color: #e84118;
 }
 
 .card-img > img {
