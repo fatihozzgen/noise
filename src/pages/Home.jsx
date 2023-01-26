@@ -19,7 +19,7 @@ function Home() {
       dispatch(setItems(res));
     });
   }, [dispatch]);
-  console.log(items.filter((item) => item.category === "girl"));
+  // console.log(items.filter((item) => item.category === "girl"));
   return (
     <div className="home">
       <div className="home-images">

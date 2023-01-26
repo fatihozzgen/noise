@@ -3,9 +3,11 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
+import { setFavorite } from "../redux/favorite/favoriteSlice";
 
 function Men() {
   const items = useSelector((state) => state.products.items);
+  const favorite = useSelector((state) => state.favorite.items);
   const [menProducts, setMenProducts] = useState([]);
 
   const dispatch = useDispatch();
@@ -24,13 +26,18 @@ function Men() {
         : name
       : "";
   };
+  console.log(favorite);
 
   return (
     <div className="women">
       {menProducts &&
         menProducts.map((res) => {
           return (
-            <div className="card-container" key={res.id}>
+            <div
+              className="card-container"
+              key={res.id}
+              onClick={() => dispatch(setFavorite([...favorite, res]))}
+            >
               <div className="card-img">
                 <img src={res.img} />
               </div>
