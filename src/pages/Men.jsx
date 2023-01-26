@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineStar,
+  AiFillHeart,
+  AiOutlineHeart,
+} from "react-icons/ai";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -39,9 +44,22 @@ function Men() {
                 <img src={res.img} />
                 <div
                   className="fav-btn"
-                  onClick={() => dispatch(setFavorite([...favorite, res]))}
+                  onClick={() => {
+                    const index = favorite.indexOf(res);
+                    if (index !== -1) {
+                      const newFav = [...favorite];
+                      newFav.splice(index, 1);
+                      dispatch(setFavorite(newFav));
+                    } else {
+                      dispatch(setFavorite([...favorite, res]));
+                    }
+                  }}
                 >
-                  <MdOutlineFavoriteBorder />
+                  {favorite.find((item) => item.id === res.id) ? (
+                    <AiFillHeart color="#e84118" />
+                  ) : (
+                    <AiOutlineHeart />
+                  )}
                 </div>
               </div>
 

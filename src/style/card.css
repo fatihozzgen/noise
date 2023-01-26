@@ -15,7 +15,7 @@
   width: 6rem;
   height: 9rem;
   position: relative;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
 }
 .fav-btn {
   background-color: whitesmoke;
@@ -43,10 +43,6 @@
 
 .fav-btn > svg {
   color: #1e272e;
-}
-
-.fav-btn > svg:hover {
-  color: #e84118;
 }
 
 .card-img > img {
