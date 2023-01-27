@@ -4,8 +4,25 @@ import Cloth2 from "../images/cloth2.jpg";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
+import { setBasket } from "../redux/basket/basketSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Basket() {
+  const basket = useSelector((state) => state.basket.items);
+
+  const shortName = (name) => {
+    return name
+      ? name.length > 35
+        ? name.substring(0, 28) + "..."
+        : name
+      : "";
+  };
+  const dispatch = useDispatch();
+  const removeCard = (id) => {
+    dispatch(setBasket([...basket.filter((item) => item.id !== id)]));
+    console.log("deleted");
+  };
+  console.log(basket);
   return (
     <>
       <div className="basket-header"> Shopping cart items</div>
@@ -21,113 +38,41 @@ function Basket() {
             </div>
           </div>
 
-          <div className="basket-cards">
-            <div className="basket-img">
-              <img src={Cloth2} />
-              <div className="basket-desc">
-                <div className="basket-name">Slim Fit Jeans</div>
-                <div className="delete-fav">
-                  <RiDeleteBin5Line />
-                  Remove item
-                  <MdOutlineFavoriteBorder />
-                  Move to favorite
+          {basket &&
+            basket.map((res) => {
+              return (
+                <div className="basket-cards" key={res.id}>
+                  <div className="basket-img">
+                    <img src={res.img} />
+                    <div className="basket-desc">
+                      <div className="basket-name">{shortName(res.name)}</div>
+                      <div className="delete-fav">
+                        <div onClick={() => removeCard(res?.id)}>
+                          <RiDeleteBin5Line />
+                          Remove item
+                        </div>
+                        <div>
+                          <MdOutlineFavoriteBorder />
+                          Move to favorite
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="basket-color">Dark blue</div>
+                  <div className="basket-color">M</div>
+                  <div className="basket-amount">
+                    <div className="amount-svg">
+                      <VscDiffAdded />
+                    </div>
+                    1
+                    <div className="amount-svg">
+                      <VscDiffRemoved />
+                    </div>
+                  </div>
+                  <div className="basket-price">{res.price}</div>
                 </div>
-              </div>
-            </div>
-            <div className="basket-color">Dark blue</div>
-            <div className="basket-color">L</div>
-            <div className="basket-amount">
-              <div className="amount-svg">
-                <VscDiffAdded />
-              </div>
-              1
-              <div className="amount-svg">
-                <VscDiffRemoved />
-              </div>
-            </div>
-            <div className="basket-price">249.99 $</div>
-          </div>
-
-          <div className="basket-cards">
-            <div className="basket-img">
-              <img src={Cloth2} />
-              <div className="basket-desc">
-                <div className="basket-name">Slim Fit Jeans</div>
-                <div className="delete-fav">
-                  <RiDeleteBin5Line />
-                  Remove item
-                  <MdOutlineFavoriteBorder />
-                  Move to favorite
-                </div>
-              </div>
-            </div>
-            <div className="basket-color">Dark blue</div>
-            <div className="basket-color">32</div>
-            <div className="basket-amount">
-              <div className="amount-svg">
-                <VscDiffAdded />
-              </div>
-              1
-              <div className="amount-svg">
-                <VscDiffRemoved />
-              </div>
-            </div>
-            <div className="basket-price">249.99 $</div>
-          </div>
-
-          <div className="basket-cards">
-            <div className="basket-img">
-              <img src={Cloth2} />
-              <div className="basket-desc">
-                <div className="basket-name">Slim Fit Jeans</div>
-                <div className="delete-fav">
-                  <RiDeleteBin5Line />
-                  Remove item
-                  <MdOutlineFavoriteBorder />
-                  Move to favorite
-                </div>
-              </div>
-            </div>
-            <div className="basket-color">Dark blue</div>
-            <div className="basket-color">XL</div>
-            <div className="basket-amount">
-              <div className="amount-svg">
-                <VscDiffAdded />
-              </div>
-              1
-              <div className="amount-svg">
-                <VscDiffRemoved />
-              </div>
-            </div>
-            <div className="basket-price">249.99 $</div>
-          </div>
-
-          <div className="basket-cards">
-            <div className="basket-img">
-              <img src={Cloth2} />
-              <div className="basket-desc">
-                <div className="basket-name">Slim Fit Jeans</div>
-                <div className="delete-fav">
-                  <RiDeleteBin5Line />
-                  Remove item
-                  <MdOutlineFavoriteBorder />
-                  Move to favorite
-                </div>
-              </div>
-            </div>
-            <div className="basket-color">Dark blue</div>
-            <div className="basket-color">M</div>
-            <div className="basket-amount">
-              <div className="amount-svg">
-                <VscDiffAdded />
-              </div>
-              1
-              <div className="amount-svg">
-                <VscDiffRemoved />
-              </div>
-            </div>
-            <div className="basket-price">249.99 $</div>
-          </div>
+              );
+            })}
         </div>
 
         <div className="basket-summary">

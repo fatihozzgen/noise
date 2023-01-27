@@ -152,18 +152,25 @@
 .delete-fav {
   /* border: 1px solid black; */
   height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 0.5rem;
-  column-gap: 0.3rem;
   font-size: 0.25rem;
   cursor: pointer;
   font-family: "Graduate", cursive;
+  display: flex;
+  padding-left: 0.6rem;
+  column-gap: 0.5rem;
+}
+.delete-fav > div {
+  /* border: 1px solid tomato; */
+  font-size: 0.27rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.1rem;
 }
 
-.delete-fav > svg {
-  /* border: 1px solid tomato; */
-  font-size: 0.35rem;
+.delete-fav > div > svg {
+  /* padding-bottom: 0.2rem; */
+  margin-bottom: 0.03rem;
 }
 
 .basket-color {

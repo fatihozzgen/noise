@@ -35,7 +35,6 @@ function Men() {
         : name
       : "";
   };
-  console.log(basket);
 
   return (
     <div className="women">
