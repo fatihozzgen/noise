@@ -94,7 +94,7 @@ function Men() {
                   <AiFillStar />
                   <AiOutlineStar />
                 </div>
-                <div className="card-price">249,99 TL</div>
+                <div className="card-price">{res.price + "TL"}</div>
               </div>
             </div>
           );
