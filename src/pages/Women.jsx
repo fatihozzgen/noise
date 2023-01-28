@@ -5,7 +5,6 @@ import {
   AiFillHeart,
   AiOutlineHeart,
 } from "react-icons/ai";
-
 import { BsBasket } from "react-icons/bs";
 import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";

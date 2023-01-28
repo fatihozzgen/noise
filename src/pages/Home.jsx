@@ -54,19 +54,6 @@ function Home() {
           <div> ACCESSORIES</div>
         </div>
       </div>
-      {/* <h1>items</h1>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-        {items &&
-          items.map((res) => {
-            return (
-              <img
-                key={res.id}
-                style={{ width: "200px", height: "300px" }}
-                src={res.img}
-              />
-            );
-          })}
-      </div> */}
     </div>
   );
 }

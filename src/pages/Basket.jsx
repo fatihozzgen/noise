@@ -1,6 +1,4 @@
 import React from "react";
-import Cloth2 from "../images/cloth2.jpg";
-
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";

@@ -2,10 +2,7 @@ import { useCallback, useState } from "react";
 import Logimage from "../images/log-image.jpg";
 import { Link } from "react-router-dom";
 
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 function Register() {
   const [email, setEmail] = useState("");
