@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { popupbox } from "../redux/user/userSlice";
 
 function Navbar() {
+  const basket = useSelector((state) => state.basket.items);
+
   const { user, popup } = useSelector((state) => state.user);
   console.log(popup);
   const dispatch = useDispatch();
@@ -34,7 +36,11 @@ function Navbar() {
           <MdFavoriteBorder />
         </Link>
 
-        <Link to="basket">
+        <Link className="basket2" to="basket">
+          {basket.length > 0 && (
+            <div className="basket-popup"> {basket.length} </div>
+          )}
+
           <BsBasket />
         </Link>
 
