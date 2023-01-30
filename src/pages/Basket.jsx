@@ -1,12 +1,20 @@
 import React from "react";
+import {
+  AiFillStar,
+  AiOutlineStar,
+  AiFillHeart,
+  AiOutlineHeart,
+} from "react-icons/ai";
+import { BsBasket } from "react-icons/bs";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
 import { setBasket } from "../redux/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { setFavorite } from "../redux/favorite/favoriteSlice";
 
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
+  const favorite = useSelector((state) => state.favorite.items);
   const totalPrice = basket.reduce((acc, item) => acc + item.price, 0);
 
   const shortName = (name) => {
@@ -50,9 +58,30 @@ function Basket() {
                           <RiDeleteBin5Line />
                           Remove item
                         </div>
-                        <div>
-                          <MdOutlineFavoriteBorder />
-                          Move to favorite
+                        <div
+                          className="delete-fav"
+                          onClick={() => {
+                            const index = favorite.indexOf(res);
+                            if (index !== -1) {
+                              const newFav = [...favorite];
+                              newFav.splice(index, 1);
+                              dispatch(setFavorite(newFav));
+                            } else {
+                              dispatch(setFavorite([...favorite, res]));
+                            }
+                          }}
+                        >
+                          {favorite.find((item) => item.id === res.id) ? (
+                            <div>
+                              <AiFillHeart color="#e84118" />
+                              Move to favorite
+                            </div>
+                          ) : (
+                            <div>
+                              <AiOutlineHeart />
+                              Move to favorite
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
