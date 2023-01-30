@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
+  const totalPrice = basket.reduce((acc, item) => acc + item.price, 0);
 
   const shortName = (name) => {
     return name
@@ -77,7 +78,7 @@ function Basket() {
           <div className="summary-header"> Summary</div>
           <div className="summary-prices">
             <div>
-              Total products: <span>249.99 $</span>
+              Total products: <span>{totalPrice} $</span>
             </div>
             <div>
               Shipping costs: <span>Free</span>
@@ -88,7 +89,7 @@ function Basket() {
           </div>
 
           <div className="total-price">
-            Total: <span>249.99 $</span>
+            Total: <span>{totalPrice} $</span>
           </div>
           <button className="checkout-btn">CHECKOUT</button>
         </div>
