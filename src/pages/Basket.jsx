@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AiFillStar,
-  AiOutlineStar,
-  AiFillHeart,
-  AiOutlineHeart,
-} from "react-icons/ai";
-import { BsBasket } from "react-icons/bs";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
 import { setBasket } from "../redux/basket/basketSlice";
@@ -16,12 +10,11 @@ import { useState } from "react";
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
   const favorite = useSelector((state) => state.favorite.items);
-  const [localQuantity, setLocalQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   let totalPrice = 0;
-
   basket.forEach((item) => {
-    totalPrice += item.price * localQuantity;
+    totalPrice += item.price * item.quantity;
   });
 
   const shortName = (name) => {
@@ -31,32 +24,11 @@ function Basket() {
         : name
       : "";
   };
-  const dispatch = useDispatch();
   const removeCard = (id) => {
     dispatch(setBasket([...basket.filter((item) => item.id !== id)]));
     console.log("deleted");
   };
-  console.log(basket);
 
-  const handleIncrease = (id) => {
-    const newBasket = [...basket];
-    const itemIndex = newBasket.findIndex((item) => item.id === id);
-    if (itemIndex !== -1) {
-      newBasket[itemIndex].localQuantity += 1;
-      setLocalQuantity(newBasket[itemIndex].localQuantity);
-      console.log("+++");
-    }
-  };
-
-  const handleDecrease = (id) => {
-    const newBasket = [...basket];
-    const itemIndex = newBasket.findIndex((item) => item.id === id);
-    if (itemIndex !== -1) {
-      newBasket[itemIndex].localQuantity -= 1;
-      setLocalQuantity(newBasket[itemIndex].localQuantity);
-      console.log("----");
-    }
-  };
   return (
     <>
       <div className="basket-header"> Shopping cart items</div>
@@ -116,17 +88,11 @@ function Basket() {
                   <div className="basket-color">Dark blue</div>
                   <div className="basket-color">M</div>
                   <div className="basket-amount">
-                    <div
-                      className="amount-svg increase"
-                      onClick={() => handleIncrease(res.id)}
-                    >
+                    <div className="amount-svg increase">
                       <VscDiffAdded />
                     </div>
-                    <div> {localQuantity}</div>
-                    <div
-                      className="amount-svg decrease "
-                      onClick={() => handleDecrease(res.id)}
-                    >
+                    <div> {res.quantity}</div>
+                    <div className="amount-svg decrease ">
                       <VscDiffRemoved />
                     </div>
                   </div>
