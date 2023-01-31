@@ -16,7 +16,8 @@ import { useState } from "react";
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
   const favorite = useSelector((state) => state.favorite.items);
-  const [localQuantity, setLocalQuantity] = useState(2);
+  const [localQuantity, setLocalQuantity] = useState(1);
+
   let totalPrice = 0;
 
   basket.forEach((item) => {
@@ -37,9 +38,25 @@ function Basket() {
   };
   console.log(basket);
 
-  const handleIncrease = (res) => {};
+  const handleIncrease = (id) => {
+    const newBasket = [...basket];
+    const itemIndex = newBasket.findIndex((item) => item.id === id);
+    if (itemIndex !== -1) {
+      newBasket[itemIndex].localQuantity += 1;
+      setLocalQuantity(newBasket[itemIndex].localQuantity);
+      console.log("+++");
+    }
+  };
 
-  const handleDecrease = (res) => {};
+  const handleDecrease = (id) => {
+    const newBasket = [...basket];
+    const itemIndex = newBasket.findIndex((item) => item.id === id);
+    if (itemIndex !== -1) {
+      newBasket[itemIndex].localQuantity -= 1;
+      setLocalQuantity(newBasket[itemIndex].localQuantity);
+      console.log("----");
+    }
+  };
   return (
     <>
       <div className="basket-header"> Shopping cart items</div>
@@ -101,14 +118,14 @@ function Basket() {
                   <div className="basket-amount">
                     <div
                       className="amount-svg increase"
-                      onClick={handleIncrease}
+                      onClick={() => handleIncrease(res.id)}
                     >
                       <VscDiffAdded />
                     </div>
                     <div> {localQuantity}</div>
                     <div
                       className="amount-svg decrease "
-                      onClick={handleDecrease}
+                      onClick={() => handleDecrease(res.id)}
                     >
                       <VscDiffRemoved />
                     </div>
