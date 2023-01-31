@@ -11,11 +11,17 @@ import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
 import { setBasket } from "../redux/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
+import { useState } from "react";
 
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
   const favorite = useSelector((state) => state.favorite.items);
-  const totalPrice = basket.reduce((acc, item) => acc + item.price, 0);
+  const [localQuantity, setLocalQuantity] = useState(2);
+  let totalPrice = 0;
+
+  basket.forEach((item) => {
+    totalPrice += item.price * localQuantity;
+  });
 
   const shortName = (name) => {
     return name
@@ -30,6 +36,10 @@ function Basket() {
     console.log("deleted");
   };
   console.log(basket);
+
+  const handleIncrease = (res) => {};
+
+  const handleDecrease = (res) => {};
   return (
     <>
       <div className="basket-header"> Shopping cart items</div>
@@ -89,11 +99,17 @@ function Basket() {
                   <div className="basket-color">Dark blue</div>
                   <div className="basket-color">M</div>
                   <div className="basket-amount">
-                    <div className="amount-svg">
+                    <div
+                      className="amount-svg increase"
+                      onClick={handleIncrease}
+                    >
                       <VscDiffAdded />
                     </div>
-                    1
-                    <div className="amount-svg">
+                    <div> {localQuantity}</div>
+                    <div
+                      className="amount-svg decrease "
+                      onClick={handleDecrease}
+                    >
                       <VscDiffRemoved />
                     </div>
                   </div>
