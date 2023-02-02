@@ -29,6 +29,17 @@ function Basket() {
     console.log("deleted");
   };
 
+  const increaseQuantity = (itemId) => {
+    const updatedBasket = basket.map((item) => {
+      const newItem = { ...item };
+      if (item.id === itemId) {
+        newItem.quantity += 1;
+      }
+      return newItem;
+    });
+    setBasket(updatedBasket);
+  };
+
   return (
     <>
       <div className="basket-header"> Shopping cart items</div>
@@ -88,7 +99,10 @@ function Basket() {
                   <div className="basket-color">Dark blue</div>
                   <div className="basket-color">M</div>
                   <div className="basket-amount">
-                    <div className="amount-svg increase">
+                    <div
+                      className="amount-svg increase"
+                      onClick={() => increaseQuantity(res.id)}
+                    >
                       <VscDiffAdded />
                     </div>
                     <div> {res.quantity}</div>

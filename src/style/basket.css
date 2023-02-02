@@ -107,6 +107,7 @@
   background-color: #c0392b;
   font-family: "Graduate", cursive;
   color: white;
+  cursor: pointer;
 }
 
 .basket-cards {

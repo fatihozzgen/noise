@@ -12,7 +12,6 @@ function Navbar() {
   const basket = useSelector((state) => state.basket.items);
 
   const { user, popup } = useSelector((state) => state.user);
-  console.log(popup);
   const dispatch = useDispatch();
   return (
     <div className="navbar">
