@@ -16,6 +16,7 @@ import Acc from "./pages/Acc";
 import Basket from "./pages/Basket";
 import Favorite from "./pages/Favorite";
 import ChangePass from "./pages/ChangePass";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="favorites" element={<Favorite />} />
           <Route path="basket" element={<Basket />} />
           <Route path="change-password" element={<ChangePass />} />
+          <Route path=":id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </div>
