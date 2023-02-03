@@ -32,7 +32,6 @@ function Register() {
           <div className="register-logo"> NOISE</div>
           <div className="register-header"> Create an account</div>
 
-          {/* <input placeholder="Name" /> */}
           <form onSubmit={handleSubmit}>
             <input
               type="email"
