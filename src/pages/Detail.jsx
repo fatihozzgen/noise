@@ -21,7 +21,7 @@ function Detail() {
   return (
     <div>
       {menProducts.map((res) => {
-        return <div> {res.name} </div>;
+        return <div key={res.id}> {res.name} </div>;
       })}
     </div>
   );

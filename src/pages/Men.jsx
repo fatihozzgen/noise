@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
 import { setBasket } from "../redux/basket/basketSlice";
+import { Link } from "react-router-dom";
 
 function Men() {
   const items = useSelector((state) => state.products.items);
@@ -83,18 +84,19 @@ function Men() {
                   </div>
                 </div>
               </div>
-
-              <div className="card-bottom">
-                <div className="card-title">{shortName(res.name)} </div>
-                <div className="card-stars">
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiOutlineStar />
+              <Link to={`/${res.id}`} replace>
+                <div className="card-bottom">
+                  <div className="card-title">{shortName(res.name)} </div>
+                  <div className="card-stars">
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiOutlineStar />
+                  </div>
+                  <div className="card-price">{res.price + "TL"}</div>
                 </div>
-                <div className="card-price">{res.price + "TL"}</div>
-              </div>
+              </Link>
             </div>
           );
         })}
