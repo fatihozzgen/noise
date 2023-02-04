@@ -21,7 +21,24 @@ function Detail() {
   return (
     <div>
       {menProducts.map((res) => {
-        return <div key={res.id}> {res.name} </div>;
+        return (
+          <div className="detail" key={res.id}>
+            <div className="detail-container">
+              <div className="detail-left-side">
+                <img src={res.img} />
+              </div>
+              <div className="detail-right-side">
+                <div className="detail-name"> {res.name} </div>
+                <div className="detail-desc"> {res.desc} </div>
+                <div className="detail-price"> {res.price} </div>
+                <div>
+                  <button> Add to favorite</button>
+                  <button> Add to bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
       })}
     </div>
   );
