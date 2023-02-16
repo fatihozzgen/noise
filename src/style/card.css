@@ -64,14 +64,14 @@
 
 .card-title {
   font-size: 0.3rem;
-  font-family: Mulish, Open Sans, sans-serif;
+  font-family: "Roboto Slab", serif;
   display: flex;
   justify-content: flex-start;
 }
 
 .card-price {
   font-size: 0.4rem;
-  font-family: Mulish, Open Sans, sans-serif;
+  font-family: "Roboto Slab", serif;
   display: flex;
   justify-content: flex-start;
 }

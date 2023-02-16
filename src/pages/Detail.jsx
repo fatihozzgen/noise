@@ -29,11 +29,11 @@ function Detail() {
               </div>
               <div className="detail-right-side">
                 <div className="detail-name"> {res.name} </div>
-                <div className="detail-price"> {res.price} </div>
+                <div className="detail-price">$ {res.price} </div>
                 <div className="detail-desc"> {res.desc} </div>
-                <div>
-                  <button> Add to favorite</button>
-                  <button> Add to bag</button>
+                <div className="detail-btn-cont">
+                  <button className="detail-btn"> Add to favorite</button>
+                  <button className="detail-btn"> Add to bag</button>
                 </div>
               </div>
             </div>

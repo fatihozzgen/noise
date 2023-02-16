@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid tomato;
+  /* border: 3px solid tomato; */
   height: calc(100% - 1.8rem);
   width: 100%;
   position: absolute;
@@ -11,7 +11,7 @@
 .detail-container {
   width: 22rem;
   height: 13rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
 }
@@ -21,11 +21,11 @@
   height: 12rem;
   padding: 0 !important;
   margin: 0 !important;
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
 }
 
 .detail-left-side {
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
   height: 12rem;
   width: 10rem;
   display: flex;
@@ -34,27 +34,43 @@
 }
 
 .detail-right-side {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 12rem;
   height: 12rem;
   padding: 1rem;
   text-align: left;
   font-family: "Roboto Slab", serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
 }
 
 .detail-name {
-  border: 1px solid black;
-  font-size: 0.5rem;
+  /* border: 1px solid black; */
+  font-size: 0.46rem;
   text-align: left;
+  font-weight: bold;
 }
 
 .detail-desc {
   font-size: 0.3rem;
   text-align: left;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .detail-price {
   font-size: 0.5rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  font-weight: 400;
+}
+
+.detail-btn-cont {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.detail-btn {
+  width: 6rem;
+  height: 1rem;
+  font-size: 0.3rem;
 }
