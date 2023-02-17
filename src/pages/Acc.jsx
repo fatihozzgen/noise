@@ -67,13 +67,16 @@ function Acc() {
                   </div>
                   <div
                     onClick={() => {
-                      const index = basket.indexOf(res);
-                      if (index !== -1) {
-                        const newBasket = [...basket];
-                        newBasket.splice(index, 1);
-                        dispatch(setBasket(newBasket));
+                      const id = res.id;
+                      const existingIndex = favorite.findIndex(
+                        (item) => item.id === id
+                      );
+                      if (existingIndex !== -1) {
+                        const newFav = [...favorite];
+                        newFav.splice(existingIndex, 1);
+                        dispatch(setFavorite(newFav));
                       } else {
-                        dispatch(setBasket([...basket, res]));
+                        dispatch(setFavorite([...favorite, res]));
                       }
                     }}
                   >
@@ -95,7 +98,7 @@ function Acc() {
                     <AiFillStar />
                     <AiOutlineStar />
                   </div>
-                  <div className="card-price">{res.price + "TL"}</div>
+                  <div className="card-price">{"$" + res.price}</div>
                 </div>
               </Link>
             </div>

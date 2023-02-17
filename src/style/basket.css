@@ -82,7 +82,7 @@
   flex-direction: column;
   row-gap: 0.2rem;
   font-size: 0.4rem;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
   height: 4.5rem;
 }
 
@@ -97,7 +97,7 @@
   justify-content: space-between;
   padding: 0.3rem;
   font-size: 0.4rem;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
 }
 
 .checkout-btn {
@@ -142,9 +142,9 @@
 .basket-name {
   /* border: 1px solid black; */
   display: flex;
-  font-size: 0.4rem;
+  font-size: 0.45rem;
   font-weight: 500;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
   padding-left: 0.5rem;
   height: 3rem;
   align-items: center;
@@ -153,16 +153,15 @@
 .delete-fav {
   /* border: 1px solid black; */
   height: 100%;
-  font-size: 0.25rem;
   cursor: pointer;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
   display: flex;
   padding-left: 0.6rem;
   column-gap: 0.5rem;
 }
 .delete-fav > div {
   /* border: 1px solid tomato; */
-  font-size: 0.27rem;
+  font-size: 0.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,11 +176,11 @@
 .basket-color {
   /* border: 1px solid black; */
   height: 100%;
-  font-size: 0.3rem;
+  font-size: 0.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
   width: 12.5%;
 }
 
@@ -193,7 +192,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 0.3rem;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
 }
 
 .amount-svg {
@@ -201,10 +200,10 @@
 }
 
 .basket-price {
-  font-size: 0.3rem;
+  font-size: 0.35rem;
   /* border: 1px solid tomato; */
   width: 12.5%;
-  font-family: "Graduate", cursive;
+  font-family: "Roboto Slab", serif;
   display: flex;
   align-items: center;
   justify-content: center;

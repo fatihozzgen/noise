@@ -110,7 +110,7 @@ function Basket() {
                       <VscDiffRemoved />
                     </div>
                   </div>
-                  <div className="basket-price">{res.price}</div>
+                  <div className="basket-price">{"$" + res.price}</div>
                 </div>
               );
             })}

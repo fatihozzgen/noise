@@ -48,10 +48,13 @@ function Women() {
                   <div
                     className="fav-btn"
                     onClick={() => {
-                      const index = favorite.indexOf(res);
-                      if (index !== -1) {
+                      const id = res.id;
+                      const existingIndex = favorite.findIndex(
+                        (item) => item.id === id
+                      );
+                      if (existingIndex !== -1) {
                         const newFav = [...favorite];
-                        newFav.splice(index, 1);
+                        newFav.splice(existingIndex, 1);
                         dispatch(setFavorite(newFav));
                       } else {
                         dispatch(setFavorite([...favorite, res]));
@@ -95,7 +98,7 @@ function Women() {
                     <AiFillStar />
                     <AiOutlineStar />
                   </div>
-                  <div className="card-price">{res.price + "TL"}</div>
+                  <div className="card-price">{"$" + res.price}</div>
                 </div>
               </Link>
             </div>
