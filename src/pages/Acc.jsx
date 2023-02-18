@@ -68,15 +68,15 @@ function Acc() {
                   <div
                     onClick={() => {
                       const id = res.id;
-                      const existingIndex = favorite.findIndex(
+                      const existingIndex = basket.findIndex(
                         (item) => item.id === id
                       );
                       if (existingIndex !== -1) {
-                        const newFav = [...favorite];
-                        newFav.splice(existingIndex, 1);
-                        dispatch(setFavorite(newFav));
+                        const newBasket = [...basket];
+                        newBasket.splice(existingIndex, 1);
+                        dispatch(setBasket(newBasket));
                       } else {
-                        dispatch(setFavorite([...favorite, res]));
+                        dispatch(setBasket([...basket, res]));
                       }
                     }}
                   >

@@ -4,6 +4,7 @@ import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 function Detail() {
   const { id } = useParams();
@@ -34,7 +35,7 @@ function Detail() {
                 <div className="detail-price">$ {res.price} </div>
                 <div className="detail-desc"> {res.desc} </div>
                 <div className="detail-btn-cont">
-                  <button
+                  <div
                     className="detail-btn"
                     onClick={() => {
                       const id = res.id;
@@ -50,8 +51,13 @@ function Detail() {
                       }
                     }}
                   >
-                    Add to favorite
-                  </button>
+                    {favorite.find((item) => item.id === res.id) ? (
+                      <AiFillHeart color="#e84118" />
+                    ) : (
+                      <AiOutlineHeart />
+                    )}
+                    <div> Move to favorite </div>
+                  </div>
                   <button className="detail-btn"> Add to bag</button>
                 </div>
               </div>

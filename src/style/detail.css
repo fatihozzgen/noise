@@ -72,5 +72,16 @@
 .detail-btn {
   width: 6rem;
   height: 1rem;
-  font-size: 0.3rem;
+  font-size: 0.35rem;
+  /* border: 1px solid tomato; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.1rem;
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.detail-btn > svg {
+  font-size: 0.45rem;
 }

@@ -70,10 +70,13 @@ function Kid() {
                   </div>
                   <div
                     onClick={() => {
-                      const index = basket.indexOf(res);
-                      if (index !== -1) {
+                      const id = res.id;
+                      const existingIndex = basket.findIndex(
+                        (item) => item.id === id
+                      );
+                      if (existingIndex !== -1) {
                         const newBasket = [...basket];
-                        newBasket.splice(index, 1);
+                        newBasket.splice(existingIndex, 1);
                         dispatch(setBasket(newBasket));
                       } else {
                         dispatch(setBasket([...basket, res]));
