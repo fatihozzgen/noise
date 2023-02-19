@@ -5,11 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { setBasket } from "../redux/basket/basketSlice";
+import { BsBasket } from "react-icons/bs";
 
 function Detail() {
   const { id } = useParams();
   const items = useSelector((state) => state.products.items);
   const favorite = useSelector((state) => state.favorite.items);
+  const basket = useSelector((state) => state.basket.items);
 
   const [menProducts, setMenProducts] = useState([]);
   const dispatch = useDispatch();
@@ -58,7 +61,29 @@ function Detail() {
                     )}
                     <div> Move to favorite </div>
                   </div>
-                  <button className="detail-btn"> Add to bag</button>
+                  <div
+                    className="detail-btn"
+                    onClick={() => {
+                      const id = res.id;
+                      const existingIndex = basket.findIndex(
+                        (item) => item.id === id
+                      );
+                      if (existingIndex !== -1) {
+                        const newBasket = [...basket];
+                        newBasket.splice(existingIndex, 1);
+                        dispatch(setBasket(newBasket));
+                      } else {
+                        dispatch(setBasket([...basket, res]));
+                      }
+                    }}
+                  >
+                    {basket.find((item) => item.id === res.id) ? (
+                      <BsBasket color="#e84118" />
+                    ) : (
+                      <BsBasket />
+                    )}
+                    Add to bag
+                  </div>
                 </div>
               </div>
             </div>
