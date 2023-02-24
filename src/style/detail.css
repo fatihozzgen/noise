@@ -50,6 +50,7 @@
   font-size: 0.46rem;
   text-align: left;
   font-weight: bold;
+  border-bottom: 1px solid silver;
 }
 
 .detail-desc {
@@ -78,10 +79,14 @@
   justify-content: center;
   align-items: center;
   column-gap: 0.1rem;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(202, 202, 202);
   cursor: pointer;
 }
 
 .detail-btn > svg {
   font-size: 0.45rem;
+}
+
+.detail-btn:hover {
+  background-color: rgb(180, 180, 180);
 }
