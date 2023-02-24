@@ -4,14 +4,13 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     user: true,
-    popup: false,
   },
   reducers: {
-    popupbox: (state, action) => {
-      state.popup = action.payload;
+    setUser: (state, action) => {
+      state.items = action.payload;
     },
   },
 });
 
-export const { popupbox } = userSlice.actions;
+export const { setUser } = userSlice.actions;
 export default userSlice.reducer;

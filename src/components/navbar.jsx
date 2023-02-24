@@ -43,11 +43,7 @@ function Navbar() {
           <BsBasket />
         </Link>
 
-        <Link
-          className="account"
-          onClick={() => dispatch(popupbox(!popup))}
-          to={!user && "login"}
-        >
+        <Link className="account" to={user && "login"}>
           <VscAccount />
         </Link>
         {!user && (

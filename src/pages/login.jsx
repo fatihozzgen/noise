@@ -3,10 +3,15 @@ import Logimage from "../images/log-image.jpg";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../redux/user/userSlice";
 
 function Login() {
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { user } = useSelector((state) => state.user);
 
   const handleSubmit = useCallback(
     (e) => {
@@ -17,13 +22,17 @@ function Login() {
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
           alert("Giriş Yapildi");
+          dispatch(setUser(false));
         })
+        .then()
         .catch(() => {
           alert("Kullanici adi veya şifre yanliş");
         });
     },
     [email, password]
   );
+  console.log(user);
+
   return (
     <div className="register">
       <div className="register-container">

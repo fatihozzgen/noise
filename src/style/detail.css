@@ -11,7 +11,7 @@
 .detail-container {
   width: 22rem;
   height: 13rem;
-  /* border: 1px solid black; */
+  border: 1.5px solid silver;
   display: flex;
   align-items: center;
 }
@@ -50,19 +50,21 @@
   font-size: 0.46rem;
   text-align: left;
   font-weight: bold;
-  border-bottom: 1px solid silver;
+  border-bottom: 1.5px solid silver;
 }
 
 .detail-desc {
   font-size: 0.3rem;
   text-align: left;
   /* border: 1px solid black; */
+  color: rgb(78, 78, 78);
 }
 
 .detail-price {
   font-size: 0.5rem;
   /* border: 1px solid black; */
   font-weight: 400;
+  text-align: right;
 }
 
 .detail-btn-cont {

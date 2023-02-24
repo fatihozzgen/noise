@@ -35,8 +35,8 @@ function Detail() {
               </div>
               <div className="detail-right-side">
                 <div className="detail-name"> {res.name} </div>
-                <div className="detail-price">$ {res.price} </div>
                 <div className="detail-desc"> {res.desc} </div>
+                <div className="detail-price">$ {res.price} </div>
                 <div className="detail-btn-cont">
                   <div
                     className="detail-btn"
