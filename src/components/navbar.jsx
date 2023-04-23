@@ -6,7 +6,6 @@ import { BsBasket } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { popupbox } from "../redux/user/userSlice";
 
 function Navbar() {
   const basket = useSelector((state) => state.basket.items);

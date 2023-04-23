@@ -5,7 +5,6 @@ import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
 import { setBasket } from "../redux/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
-import { useState } from "react";
 
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
