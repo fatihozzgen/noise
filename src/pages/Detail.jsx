@@ -35,32 +35,9 @@ function Detail() {
               </div>
               <div className="detail-right-side">
                 <div className="detail-name"> {res.name} </div>
-                <div className="detail-desc"> {res.desc} </div>
                 <div className="detail-price">$ {res.price} </div>
+                <div className="detail-desc"> {res.desc} </div>
                 <div className="detail-btn-cont">
-                  <div
-                    className="detail-btn"
-                    onClick={() => {
-                      const id = res.id;
-                      const existingIndex = favorite.findIndex(
-                        (item) => item.id === id
-                      );
-                      if (existingIndex !== -1) {
-                        const newFav = [...favorite];
-                        newFav.splice(existingIndex, 1);
-                        dispatch(setFavorite(newFav));
-                      } else {
-                        dispatch(setFavorite([...favorite, res]));
-                      }
-                    }}
-                  >
-                    {favorite.find((item) => item.id === res.id) ? (
-                      <AiFillHeart color="#e84118" />
-                    ) : (
-                      <AiOutlineHeart />
-                    )}
-                    <div> Move to favorite </div>
-                  </div>
                   <div
                     className="detail-btn"
                     onClick={() => {
@@ -83,6 +60,28 @@ function Detail() {
                       <BsBasket />
                     )}
                     Add to bag
+                  </div>
+                  <div
+                    className="fav-btn"
+                    onClick={() => {
+                      const id = res.id;
+                      const existingIndex = favorite.findIndex(
+                        (item) => item.id === id
+                      );
+                      if (existingIndex !== -1) {
+                        const newFav = [...favorite];
+                        newFav.splice(existingIndex, 1);
+                        dispatch(setFavorite(newFav));
+                      } else {
+                        dispatch(setFavorite([...favorite, res]));
+                      }
+                    }}
+                  >
+                    {favorite.find((item) => item.id === res.id) ? (
+                      <AiFillHeart color="#e84118" />
+                    ) : (
+                      <AiOutlineHeart />
+                    )}
                   </div>
                 </div>
               </div>
