@@ -5,6 +5,7 @@ import { VscDiffAdded, VscDiffRemoved } from "react-icons/vsc";
 import { setBasket } from "../redux/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
+import { Link } from "react-router-dom";
 
 function Basket() {
   const basket = useSelector((state) => state.basket.items);
@@ -61,7 +62,10 @@ function Basket() {
                   <div className="basket-img">
                     <img src={res.img} />
                     <div className="basket-desc">
-                      <div className="basket-name">{shortName(res.name)}</div>
+                    <Link  className="basket-name" to={`/${res.id}`} replace>
+                      <div>{shortName(res.name)}</div>
+</Link>
+
                       <div className="delete-fav">
                         <div onClick={() => removeCard(res?.id)}>
                           <RiDeleteBin5Line />

@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
 import { setBasket } from "../redux/basket/basketSlice";
+import { Link } from "react-router-dom";
 
 function Favorite() {
   const items = useSelector((state) => state.products.items);
@@ -78,7 +79,12 @@ function Favorite() {
               </div>
 
               <div className="card-bottom">
-                <div className="card-title">{shortName(res.name)} </div>
+
+                <div className="card-title"><Link to={`/${res.id}`} replace>
+                  {shortName(res.name)} 
+                  </Link>
+                  </div>
+
                 <div className="card-stars">
                   <AiFillStar />
                   <AiFillStar />

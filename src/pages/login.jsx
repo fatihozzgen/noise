@@ -22,7 +22,7 @@ function Login() {
       }
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-          alert("Giriş Yapildi");
+          // alert("Giriş Yapildi");
           navigate('/');
 
           dispatch(setUser(false));
