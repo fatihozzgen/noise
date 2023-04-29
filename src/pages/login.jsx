@@ -2,12 +2,13 @@ import { useCallback, useState } from "react";
 import Logimage from "../images/log-image.jpg";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../redux/user/userSlice";
 
 function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,6 +23,8 @@ function Login() {
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
           alert("Giriş Yapildi");
+          navigate('/');
+
           dispatch(setUser(false));
         })
         .then()
