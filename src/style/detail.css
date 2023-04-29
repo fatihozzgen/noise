@@ -11,7 +11,7 @@
 .detail-container {
   width: 22rem;
   height: 13rem;
-  border: 1.5px solid silver;
+  /* border: 1.5px solid silver; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,14 +37,15 @@
 
 .detail-right-side {
   /* border: 1px solid green; */
-  width: 8.5rem;
+  width: 12rem;
   height: 12rem;
-  padding: 1rem;
+  padding: 0.8rem;
   text-align: left;
   font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: column;
-  row-gap: 0.4rem;
+  justify-content: center;
+  row-gap: 0.6rem;
   background-color: #F0EEED;
 }
 
@@ -68,6 +69,14 @@
   /* border: 1px solid black; */
   font-weight: 400;
   text-align: left;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.detail-price > .card-stars > svg {
+  font-size: 0.37rem;
+
 }
 
 .detail-btn-cont {
@@ -76,7 +85,7 @@
 }
 
 .detail-btn {
-  width: 6rem;
+  width: 85%;
   height: 1rem;
   font-size: 0.35rem;
   /* border: 1px solid tomato; */
@@ -89,7 +98,7 @@
   color: white;
 }
 .fav-btn {
-  width: 1.4rem;
+  width:15%;
   height: 1rem;
   font-size: 0.35rem;
   /* border: 1px solid tomato; */
@@ -112,5 +121,9 @@
 }
 
 .detail-btn:hover {
-  background-color: rgb(180, 180, 180);
+  background-color:#383838;
+}
+
+.fav-btn:hover {
+  background-color:#383838;
 }

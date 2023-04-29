@@ -4,7 +4,7 @@ import { getFirebaseData } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { setItems } from "../redux/products/productSlice";
 import { setFavorite } from "../redux/favorite/favoriteSlice";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart, AiFillStar,AiOutlineStar } from "react-icons/ai";
 import { setBasket } from "../redux/basket/basketSlice";
 import { BsBasket } from "react-icons/bs";
 
@@ -35,7 +35,13 @@ function Detail() {
               </div>
               <div className="detail-right-side">
                 <div className="detail-name"> {res.name} </div>
-                <div className="detail-price">$ {res.price} </div>
+                <div className="detail-price">$ {res.price} <div className="card-stars">
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiOutlineStar />
+                  </div> </div>
                 <div className="detail-desc"> {res.desc} </div>
                 <div className="detail-btn-cont">
                   <div
