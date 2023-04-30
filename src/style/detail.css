@@ -97,7 +97,7 @@
   cursor: pointer;
   color: white;
 }
-.fav-btn {
+.detail-fav-btn {
   width:15%;
   height: 1rem;
   font-size: 0.35rem;
@@ -115,7 +115,7 @@
   color: white;
 }
 
-.fav-btn > svg {
+.detail-fav-btn > svg {
   font-size: 0.65rem;
   color: white;
 }
@@ -124,6 +124,6 @@
   background-color:#383838;
 }
 
-.fav-btn:hover {
+.detail-fav-btn:hover {
   background-color:#383838;
 }

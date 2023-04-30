@@ -68,7 +68,7 @@ function Detail() {
                     Add to bag
                   </div>
                   <div
-                    className="fav-btn"
+                    className="detail-fav-btn"
                     onClick={() => {
                       const id = res.id;
                       const existingIndex = favorite.findIndex(

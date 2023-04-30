@@ -17,6 +17,8 @@ function Basket() {
     totalPrice += item.price * item.quantity;
   });
 
+  totalPrice = Math.round(totalPrice * 100) / 100;
+
   const shortName = (name) => {
     return name
       ? name.length > 35
