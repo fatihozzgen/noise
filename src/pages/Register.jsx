@@ -1,12 +1,14 @@
 import { useCallback, useState } from "react";
 import Logimage from "../images/log-image.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = useCallback(
     (e) => {
@@ -16,14 +18,17 @@ function Register() {
       }
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-          alert("You have sign up");
+          alert("You have signed up");
+          navigate('/login', { replace: true } );
+
         })
         .catch((e) => {
           console.log(e);
         });
     },
-    [email, password]
+    [email, password, navigate]
   );
+
 
   return (
     <div className="register">
