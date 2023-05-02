@@ -89,6 +89,12 @@ input {
   color: rgb(97, 97, 97);
   font-family: "Graduate", cursive;
   font-weight: 100;
+  /* border: 1px solid tomato; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.1rem;
+
 }
 
 .sign-text > span {
